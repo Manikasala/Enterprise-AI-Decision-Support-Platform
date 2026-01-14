@@ -1,0 +1,274 @@
+---
+query: can you explain what is my leave policy i nedd detail information to change my plans
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\New folder\enterprise_ai_platform\main.py", line 13, in <module>
+    verified = verify(ctx)
+               ^^^^^^^^^^^
+  File "C:\Users\ASUS\Desktop\New folder\enterprise_ai_platform\verifier_agent.py", line 5, in verify
+    return llm.invoke(f"Verify facts:\n{context}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 158, in invoke
+    self.generate_prompt(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 560, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 421, in generate
+    raise e
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 411, in generate
+    self._generate_with_cache(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 632, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 259, in _generate
+    final_chunk = self._chat_stream_with_aggregation(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 190, in _chat_stream_with_aggregation
+    for stream_resp in self._create_chat_stream(messages, stop, **kwargs):
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 162, in _create_chat_stream
+    yield from self._create_stream(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\llms\ollama.py", line 244, in _create_stream
+    raise OllamaEndpointNotFoundError(
+langchain_community.llms.ollama.OllamaEndpointNotFoundError: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull mistral`.
+
+[2026-01-13 13:28:06.366814] Ollama call failed in verifier: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull mistral`.
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\New folder\enterprise_ai_platform\verifier_agent.py", line 22, in _call_llm
+    return _llm.invoke(prompt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 158, in invoke
+    self.generate_prompt(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 560, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 421, in generate
+    raise e
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 411, in generate
+    self._generate_with_cache(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 632, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 259, in _generate
+    final_chunk = self._chat_stream_with_aggregation(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 190, in _chat_stream_with_aggregation
+    for stream_resp in self._create_chat_stream(messages, stop, **kwargs):
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 162, in _create_chat_stream
+    yield from self._create_stream(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\llms\ollama.py", line 244, in _create_stream
+    raise OllamaEndpointNotFoundError(
+langchain_community.llms.ollama.OllamaEndpointNotFoundError: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull mistral`.
+
+[2026-01-13 13:28:06.375789] Ollama call failed: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull mistral`.
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\New folder\enterprise_ai_platform\responder_agent.py", line 23, in _call_llm
+    return _llm.invoke(prompt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 158, in invoke
+    self.generate_prompt(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 560, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 421, in generate
+    raise e
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 411, in generate
+    self._generate_with_cache(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 632, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 259, in _generate
+    final_chunk = self._chat_stream_with_aggregation(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 190, in _chat_stream_with_aggregation
+    for stream_resp in self._create_chat_stream(messages, stop, **kwargs):
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 162, in _create_chat_stream
+    yield from self._create_stream(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\llms\ollama.py", line 244, in _create_stream
+    raise OllamaEndpointNotFoundError(
+langchain_community.llms.ollama.OllamaEndpointNotFoundError: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull mistral`.
+
+[2026-01-13 13:28:53.890784] Ollama call failed in verifier: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull mistral`.
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\New folder\enterprise_ai_platform\verifier_agent.py", line 22, in _call_llm
+    return _llm.invoke(prompt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 158, in invoke
+    self.generate_prompt(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 560, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 421, in generate
+    raise e
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 411, in generate
+    self._generate_with_cache(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 632, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 259, in _generate
+    final_chunk = self._chat_stream_with_aggregation(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 190, in _chat_stream_with_aggregation
+    for stream_resp in self._create_chat_stream(messages, stop, **kwargs):
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 162, in _create_chat_stream
+    yield from self._create_stream(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\llms\ollama.py", line 244, in _create_stream
+    raise OllamaEndpointNotFoundError(
+langchain_community.llms.ollama.OllamaEndpointNotFoundError: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull mistral`.
+
+[2026-01-13 13:28:53.902524] Ollama call failed: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull mistral`.
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\New folder\enterprise_ai_platform\responder_agent.py", line 23, in _call_llm
+    return _llm.invoke(prompt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 158, in invoke
+    self.generate_prompt(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 560, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 421, in generate
+    raise e
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 411, in generate
+    self._generate_with_cache(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 632, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 259, in _generate
+    final_chunk = self._chat_stream_with_aggregation(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 190, in _chat_stream_with_aggregation
+    for stream_resp in self._create_chat_stream(messages, stop, **kwargs):
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 162, in _create_chat_stream
+    yield from self._create_stream(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\llms\ollama.py", line 244, in _create_stream
+    raise OllamaEndpointNotFoundError(
+langchain_community.llms.ollama.OllamaEndpointNotFoundError: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull mistral`.
+
+[2026-01-13 13:29:37.486994] Ollama call failed in verifier: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull mistral`.
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\New folder\enterprise_ai_platform\verifier_agent.py", line 22, in _call_llm
+    return _llm.invoke(prompt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 158, in invoke
+    self.generate_prompt(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 560, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 421, in generate
+    raise e
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 411, in generate
+    self._generate_with_cache(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 632, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 259, in _generate
+    final_chunk = self._chat_stream_with_aggregation(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 190, in _chat_stream_with_aggregation
+    for stream_resp in self._create_chat_stream(messages, stop, **kwargs):
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 162, in _create_chat_stream
+    yield from self._create_stream(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\llms\ollama.py", line 244, in _create_stream
+    raise OllamaEndpointNotFoundError(
+langchain_community.llms.ollama.OllamaEndpointNotFoundError: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull mistral`.
+
+[2026-01-13 13:29:37.500079] Ollama call failed: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull mistral`.
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\New folder\enterprise_ai_platform\responder_agent.py", line 23, in _call_llm
+    return _llm.invoke(prompt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 158, in invoke
+    self.generate_prompt(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 560, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 421, in generate
+    raise e
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 411, in generate
+    self._generate_with_cache(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 632, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 259, in _generate
+    final_chunk = self._chat_stream_with_aggregation(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 190, in _chat_stream_with_aggregation
+    for stream_resp in self._create_chat_stream(messages, stop, **kwargs):
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 162, in _create_chat_stream
+    yield from self._create_stream(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\llms\ollama.py", line 244, in _create_stream
+    raise OllamaEndpointNotFoundError(
+langchain_community.llms.ollama.OllamaEndpointNotFoundError: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull mistral`.
+
+[2026-01-13 13:30:45.876808] Ollama call failed in verifier: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull mistral`.
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\New folder\enterprise_ai_platform\verifier_agent.py", line 22, in _call_llm
+    return _llm.invoke(prompt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 158, in invoke
+    self.generate_prompt(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 560, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 421, in generate
+    raise e
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 411, in generate
+    self._generate_with_cache(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 632, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 259, in _generate
+    final_chunk = self._chat_stream_with_aggregation(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 190, in _chat_stream_with_aggregation
+    for stream_resp in self._create_chat_stream(messages, stop, **kwargs):
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 162, in _create_chat_stream
+    yield from self._create_stream(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\llms\ollama.py", line 244, in _create_stream
+    raise OllamaEndpointNotFoundError(
+langchain_community.llms.ollama.OllamaEndpointNotFoundError: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull mistral`.
+
+[2026-01-13 13:30:45.888689] Ollama call failed: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull mistral`.
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Desktop\New folder\enterprise_ai_platform\responder_agent.py", line 23, in _call_llm
+    return _llm.invoke(prompt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 158, in invoke
+    self.generate_prompt(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 560, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 421, in generate
+    raise e
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 411, in generate
+    self._generate_with_cache(
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_core\language_models\chat_models.py", line 632, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 259, in _generate
+    final_chunk = self._chat_stream_with_aggregation(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 190, in _chat_stream_with_aggregation
+    for stream_resp in self._create_chat_stream(messages, stop, **kwargs):
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\chat_models\ollama.py", line 162, in _create_chat_stream
+    yield from self._create_stream(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\Lib\site-packages\langchain_community\llms\ollama.py", line 244, in _create_stream
+    raise OllamaEndpointNotFoundError(
+langchain_community.llms.ollama.OllamaEndpointNotFoundError: Ollama call failed with status code 404. Maybe your model is not found and you should pull the model with `ollama pull mistral`.
+
